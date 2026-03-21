@@ -2,9 +2,6 @@
 
 # 📊 Notebook 1: Data Preprocessing
 
-## 📂 File
-`notebooks/01_data_preprocessing.ipynb`
-
 ---
 
 ## 🚀 Overview
@@ -98,16 +95,7 @@ data/processed/y.npy
 
 ---
 
-## 🚀 Next Step
-
-👉 Notebook 2: LSTM Model Training  
-
----
-
 # 🤖 Notebook 2: LSTM Model Training
-
-## 📂 File
-`notebooks/02_lstm_training.ipynb`
 
 ---
 
