@@ -34,14 +34,10 @@ It prepares the raw data into a clean and structured format suitable for trainin
 - Uploaded dataset using Google Colab
 - Loaded into Pandas DataFrame
 
----
-
 ### 2. Data Exploration
 - Checked dataset structure using `info()`
 - Generated statistical summary using `describe()`
 - Identified missing values
-
----
 
 ### 3. Data Cleaning
 - Handled missing values:
@@ -49,45 +45,34 @@ It prepares the raw data into a clean and structured format suitable for trainin
   - Categorical → Mode
 - Ensured dataset consistency
 
----
-
 ### 4. Feature Engineering
 - Converted `timestamp` to datetime format
 - Extracted:
   - Hour
   - Day
   - Month
-- Created time-based features for analysis
-
----
 
 ### 5. Data Visualization
 - Hourly energy consumption trends
 - Appliance-wise energy usage
-- Correlation heatmap for feature relationships
-
----
+- Correlation heatmap
 
 ### 6. Data Normalization
 - Applied MinMaxScaler
 - Scaled features between 0 and 1
-- Prepared data for deep learning models
-
----
 
 ### 7. Sequence Creation (LSTM Preparation)
-
 - Created time-series sequences using sliding window
 - Sequence length: 24 (past 24 hours)
 - Generated:
   - `X` → input sequences
   - `y` → target values
 
----
-
 ### 8. Data Saving
 
 Processed data saved as:
+
+
 models/scaler.pkl
 data/processed/X.npy
 data/processed/y.npy
@@ -117,12 +102,6 @@ data/processed/y.npy
 
 👉 Notebook 2: LSTM Model Training  
 
-- Train deep learning model  
-- Evaluate performance  
-- Generate predictions  
-
----
-
 ---
 
 # 🤖 Notebook 2: LSTM Model Training
@@ -134,37 +113,29 @@ data/processed/y.npy
 
 ## 🚀 Overview
 
-This notebook focuses on building and training a **Deep Learning model (LSTM)** to predict electricity consumption using time-series data.
-
-The model learns patterns from historical energy usage and predicts future consumption.
+This notebook builds and trains a **Deep Learning LSTM model** to predict electricity consumption using time-series data.
 
 ---
 
 ## 📊 Input Data
 
-The model uses preprocessed data generated from Notebook 1:
-
-- `X.npy` → Input sequences (time-series data)
-- `y.npy` → Target values (energy consumption)
-- `scaler.pkl` → Data normalization model
+- `X.npy` → Input sequences  
+- `y.npy` → Target values  
+- `scaler.pkl` → Data normalization  
 
 ---
 
 ## ⚙️ Steps Performed
 
 ### 1. Data Loading
-- Uploaded processed `.npy` files and scaler
-- Loaded input sequences and target values
+- Uploaded processed files
+- Loaded sequences and targets
 
 ### 2. Train-Test Split
 - 80% training data  
 - 20% testing data  
 
----
-
 ### 3. Model Architecture
-
-The LSTM model consists of:
 
 - LSTM Layer (64 units)
 - Dropout (0.2)
@@ -173,38 +144,30 @@ The LSTM model consists of:
 - Dense Layer (ReLU)
 - Output Layer (1 neuron)
 
----
-
 ### 4. Model Training
 
-- Loss Function: Mean Squared Error (MSE)
-- Optimizer: Adam
-- Epochs: 20
-- Batch Size: 32
-- Early Stopping used to prevent overfitting
-
----
+- Loss Function: MSE  
+- Optimizer: Adam  
+- Epochs: 20  
+- Batch Size: 32  
+- EarlyStopping used  
 
 ### 5. Model Evaluation
 
-Performance metrics used:
-
-- MAE (Mean Absolute Error)
-- RMSE (Root Mean Square Error)
-- R² Score
-
----
+- MAE (Mean Absolute Error)  
+- RMSE (Root Mean Square Error)  
+- R² Score  
 
 ### 6. Visualization
 
-- Training vs Validation Loss
-- Actual vs Predicted Energy Consumption
-
----
+- Training vs Validation Loss  
+- Actual vs Predicted Graph  
 
 ### 7. Model Saving
 
-The trained model is saved as:
+Model saved as:
+
+
 models/lstm_model.h5
 
 
@@ -212,25 +175,25 @@ models/lstm_model.h5
 
 ## 📈 Output
 
-- Accurate prediction of electricity consumption
-- Graphs for performance analysis
-- Trained deep learning model ready for deployment
+- Energy consumption predictions  
+- Performance graphs  
+- Trained deep learning model  
 
 ---
 
 ## 🎯 Key Achievements
 
-✔ Successfully trained LSTM model  
-✔ Captured time-series patterns  
-✔ Achieved reliable prediction accuracy  
-✔ Model ready for real-world usage  
+✔ Built LSTM model  
+✔ Learned time-series patterns  
+✔ Achieved good prediction accuracy  
+✔ Model ready for deployment  
 
 ---
 
 ## 🚀 Next Step
 
 👉 Notebook 3: Model Evaluation & API Development  
-👉 Deploy model using Flask / FastAPI  
-👉 Build dashboard for visualization  
+👉 Flask / FastAPI deployment  
+👉 Dashboard visualization  
 
 ---
