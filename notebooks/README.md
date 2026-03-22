@@ -178,10 +178,127 @@ models/lstm_model.h5
 
 ---
 
+# 📊 Notebook 3: Model Evaluation
+
+---
+
+## 🚀 Overview
+
+This notebook evaluates the performance of the trained models and compares **Deep Learning (LSTM)** with traditional **Machine Learning models**.
+
+It identifies the best model for predicting electricity consumption.
+
+---
+
+## 📊 Input Data
+
+- `X.npy` → Input sequences  
+- `y.npy` → Target values  
+- `lstm_model.h5` → Trained LSTM model  
+
+---
+
+## ⚙️ Steps Performed
+
+### 1. Data Loading
+- Uploaded processed `.npy` files  
+- Loaded trained LSTM model  
+- Verified input shapes  
+
+---
+
+### 2. Train-Test Split
+- 80% training data  
+- 20% testing data  
+
+---
+
+### 3. LSTM Prediction
+- Generated predictions using trained LSTM model  
+- Reshaped output for evaluation  
+
+---
+
+### 4. Baseline Model Training
+
+- Flattened time-series input for ML models  
+- Trained:
+  - Linear Regression  
+  - Random Forest  
+
+---
+
+### 5. Model Evaluation
+
+Evaluated models using:
+
+- MAE (Mean Absolute Error)  
+- RMSE (Root Mean Square Error)  
+- R² Score  
+- Accuracy (%)  
+
+---
+
+### 6. Model Comparison
+
+- Created comparison table of all models  
+- Visualized performance using bar charts  
+
+---
+
+### 7. Best Model Selection
+
+- Selected best model based on highest R² score  
+
+---
+
+### 8. Model Saving
+
+Saved models:
+
+
+models/lstm_model.h5
+models/bill_model.pkl
+models/best_model.pkl / best_model.h5
+
+
+---
+
+### 9. Prediction Visualization
+
+- Compared actual vs predicted values  
+- Visualized model performance  
+
+---
+
+### 10. Model Export
+
+- Downloaded trained models for deployment  
+
+---
+
+## 📈 Output
+
+- Model comparison table  
+- Performance graphs  
+- Best model selection  
+- Saved models ready for deployment  
+
+---
+
+## 🎯 Key Achievements
+
+✔ Compared Deep Learning vs Machine Learning  
+✔ Evaluated multiple performance metrics  
+✔ Identified best model for prediction  
+✔ Saved models for real-world deployment  
+
+---
+
 ## 🚀 Next Step
 
-👉 Notebook 3: Model Evaluation & API Development  
-👉 Flask / FastAPI deployment  
-👉 Dashboard visualization  
+👉 Build Flask backend API  
+👉 Integrate model into web application  
+👉 Create dashboard for visualization  
 
 ---
