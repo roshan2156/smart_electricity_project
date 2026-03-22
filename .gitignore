@@ -1,23 +1,48 @@
+# Python cache
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.Python
+
+# Environment
 env/
 venv/
+.venv/
 .env
+.Python
+
+# Database
 *.db
 *.sqlite
 *.sqlite3
+
+# System files
 .DS_Store
+
+# Jupyter
 .ipynb_checkpoints/
-*.h5
-*.pkl
-data/raw/
-data/processed/
-uploads/
-instance/
+
+# Logs
+*.log
+
+# Testing
 .pytest_cache/
 .coverage
 htmlcov/
-*.log
+
+# Data (large files)
+data/raw/
+data/processed/
+
+# Uploads
+uploads/
+instance/
+
+# ❌ Ignore ONLY large model file
+models/bill_model.pkl
+
+# ❌ Optional: ignore best_model if large
+models/best_model.pkl
+
+# ✅ IMPORTANT: Allow required models
+!models/lstm_model.h5
+!models/scaler.pkl
